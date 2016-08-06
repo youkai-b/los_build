@@ -162,11 +162,7 @@ endif
 ifeq ($(TARGET_BUILD_VARIANT),eng)
 BUILD_KEYS := test-keys
 else
-ifeq ($(LMODROID_BUILDTYPE),UNOFFICIAL)
-BUILD_KEYS := dev-keys
-else
 BUILD_KEYS := release-keys
-endif
 endif
 BUILD_VERSION_TAGS += $(BUILD_KEYS)
 BUILD_VERSION_TAGS := $(subst $(space),$(comma),$(sort $(BUILD_VERSION_TAGS)))
